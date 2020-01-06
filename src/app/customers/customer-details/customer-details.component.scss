@@ -1,0 +1,40 @@
+p{
+  color:black;
+}
+
+h5{
+  color:green;
+}
+
+mat-icon{
+  color: purple;
+}
+
+body{
+  padding: 5%;
+}
+
+mat-toolbar{
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000;
+}
+
+mat-list-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  height: auto !important;
+  width: max-content !important;
+}
+
+mat-nav-list{
+  width: 100%;
+}
+
+mat-divider{
+  background-color: grey;
+  width: 100% !important;
+}

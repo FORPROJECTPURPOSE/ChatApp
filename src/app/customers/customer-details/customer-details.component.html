@@ -1,25 +1,33 @@
+<body>
+
 <div *ngIf="customer">
+<mat-nav-list>
+  <mat-list-item class="example-small-box mat-elevation-z4">
+    <mat-icon mat-list-icon>person</mat-icon>
 
-  <mat-icon mat-list-icon>person</mat-icon>
-  <div>
-    <label>First Name: </label> {{customer.name}}
-  </div>
-  <div>
-    <label>Phone: </label> {{customer.phone}}
-  </div>
-  <div>
-    <label>Message: </label> {{customer.message}}
-  </div>
-  <div>
-    <label>Active: </label> {{customer.active}}
-  </div>
+      <p>First Name:  {{customer.name}}<br>
+
+      Phone:  {{customer.phone}}<br>
 
 
-  <span class="button is-small btn-primary" *ngIf='customer.active' (click)='updateActive(false)'>Inactive</span>
+      Message:  {{customer.message}} </p>
 
-  <span class="button is-small btn-primary" *ngIf='!customer.active' (click)='updateActive(true)'>Active</span>
+    <div>
+      <h5>Active:  {{customer.active}}</h5>
+    </div>
+  </mat-list-item>
+</mat-nav-list>
 
-  <span class="button is-small btn-danger" (click)='deleteCustomer()'>Delete</span>
+  <br>
 
-  <hr/>
+
+<!--  <span class="button is-small btn-primary" *ngIf='customer.active' (click)='updateActive(false)'>Inactive</span>-->
+
+<!--  <span class="button is-small btn-primary" *ngIf='!customer.active' (click)='updateActive(true)'>Active</span>-->
+
+<!--  <span class="button is-small btn-danger" (click)='deleteCustomer()'>Delete</span>-->
+
+<!--  <mat-divider></mat-divider>-->
 </div>
+
+</body>
