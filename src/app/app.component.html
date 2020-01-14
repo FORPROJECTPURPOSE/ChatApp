@@ -1,13 +1,10 @@
-<mat-toolbar color="primary" >
+<mat-toolbar color="primary" class="example-small-box mat-elevation-z4" >
   <span>Vinota Admin</span>
+  <span class="example-spacer"></span>
+  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">more_vert</mat-icon>
 
 </mat-toolbar>
-
-<mat-tab-group>
-  <mat-tab label="First"> Content 1 </mat-tab>
-  <mat-tab label="Second"> Content 2 </mat-tab>
-  <mat-tab label="Third"> Content 3 </mat-tab>
-</mat-tab-group>
+<section>
 
 <div class="container-fluid">
 <!--  <div style="color: blue;">-->
@@ -15,8 +12,10 @@
 <!--  </div>-->
 
   <nav>
-    <a routerLink="customers" class="btn btn-primary active" role="button" routerLinkActive="active">Customers</a>
-    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
+<!--    <a routerLink="customers" class="btn btn-primary active" role="button" routerLinkActive="active">Customers</a>-->
+<!--    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>-->
   </nav>
   <router-outlet></router-outlet>
 </div>
+</section>
+

@@ -1,19 +1,19 @@
 <h3>Create Customer</h3>
 <div [hidden]="submitted" style="width: 300px;">
-  <form (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="onSubmit()" [formGroup]="addCustomerForm">
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" required [(ngModel)]="customer.name" name="name">
+      <input type="text" class="form-control" id="name" required formControlName="name">
     </div>
 
     <div class="form-group">
       <label for="phone">Phone</label>
-      <input type="text" class="form-control" id="phone" required [(ngModel)]="customer.phone" name="phone">
+      <input type="text" class="form-control" id="phone" required formControlName="phone">
     </div>
 
     <div class="form-group">
       <label for="message">Message</label>
-      <input type="text" class="form-control" id="message" required [(ngModel)]="customer.message" name="message">
+      <input type="text" class="form-control" id="message" required formControlName="message">
     </div>
 
     <button type="submit" class="btn btn-success">Submit</button>

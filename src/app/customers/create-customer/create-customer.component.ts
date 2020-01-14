@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Customer} from '../Customer';
 import {CustomerService} from '../customer.service';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-create-customer',
@@ -11,6 +12,12 @@ export class CreateCustomerComponent implements OnInit {
 
   customer: Customer = new Customer();
   submitted = false;
+
+  addCustomerForm = new FormGroup({
+    name: new FormControl(),
+    phone: new FormControl(),
+    message: new FormControl()
+  });
 
   constructor(private customerService: CustomerService) { }
 
@@ -23,7 +30,9 @@ export class CreateCustomerComponent implements OnInit {
   }
 
   save() {
-    this.customerService.createCustomer(this.customer);
+    this.customerService.createCustomer(this.addCustomerForm.value).then(doc => {
+      console.log(doc);
+    });
     this.customer = new Customer();
   }
 

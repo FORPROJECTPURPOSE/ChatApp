@@ -15,10 +15,8 @@ body{
 }
 
 mat-toolbar{
-  position: sticky;
-  position: -webkit-sticky; /* For macOS/iOS Safari */
-  top: 0; /* Sets the sticky toolbar to be on top */
-  z-index: 1000;
+  background-color: black;
+  position: fixed;
 }
 
 mat-list-item{
@@ -27,7 +25,8 @@ mat-list-item{
   justify-content: center;
   border-radius: 8px;
   height: auto !important;
-  width: max-content !important;
+  //width: max-content !important;
+  //margin-bottom: -40px;
 }
 
 mat-nav-list{
@@ -38,3 +37,9 @@ mat-divider{
   background-color: grey;
   width: 100% !important;
 }
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+

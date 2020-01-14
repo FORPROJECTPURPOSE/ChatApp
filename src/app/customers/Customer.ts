@@ -4,4 +4,9 @@ export class Customer {
   phone: number;
   active = true;
   message: string;
+  subject: string;
+  readStatus: number;
+  timeStamp: string;
+  type: string;
+  id: any;
 }
