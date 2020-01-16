@@ -26,6 +26,10 @@ import { MessagesComponent } from './Messages/messages/messages.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatExpansionModule} from '@angular/material/expansion';
+
+
 
 
 @NgModule({
@@ -52,7 +56,9 @@ import {MatButtonModule} from '@angular/material/button';
         ReactiveFormsModule,
         MatFormFieldModule,
         MatInputModule,
-        MatButtonModule
+        MatButtonModule,
+      MatSnackBarModule,
+      MatExpansionModule
     ],
   providers: [],
   bootstrap: [AppComponent]

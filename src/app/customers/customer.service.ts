@@ -11,6 +11,7 @@ import * as firebase from 'firebase';
 })
 export class CustomerService {
 
+  public now: Date = new Date();
   @Input() customer: Customer;
   private dbPath = 'tickets';
   private customersRef: AngularFirestoreCollection<unknown>;
@@ -57,7 +58,8 @@ export class CustomerService {
   }
 
   getMessages(USER_DOC, TICKET_DOC) {
-    const query3 = this.db.collection(`support-chat/${USER_DOC}/tickets/${TICKET_DOC}/messages`); // get user messages (Chat Window)
+    const query3 = this.db.collection(`support-chat/${USER_DOC}/tickets/${TICKET_DOC}/messages`,
+        ref => ref.orderBy('timeStamp')); // get user messages (Chat Window)
     return query3.snapshotChanges()
       .pipe(map(actions => actions.map(a => {
         const DATA: any = a.payload.doc.data();
@@ -66,9 +68,17 @@ export class CustomerService {
       })));
   }
   sendMessage(USER_DOC, TICKET_DOC, MESSAGE) {
+
+    if (MESSAGE === '' || MESSAGE === null) {
+      return null;
+    }
+
     const query3 = this.db.collection(`support-chat/${USER_DOC}/tickets/${TICKET_DOC}/messages`); // get user messages (Chat Window)
     return query3.add({
-      message: MESSAGE
+      message: MESSAGE,
+      name: 'Ishan',
+      timeStamp: this.now = new Date(),
+      type: 'admin'
     });
   }
 
