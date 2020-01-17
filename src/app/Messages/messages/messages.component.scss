@@ -1,0 +1,98 @@
+mat-nav-list{
+  width: 95% !important;
+  margin-left: 2.5%;
+  margin-top: -25px;
+}
+
+.bottomMargineAppled{
+  margin-bottom: 55px;
+  margin-top:20px;
+  background: white;
+}
+
+.example-container {
+  width: 82.5%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+//.bottomStick{
+//  /*border-top:1px solid green;border-bottom:1px solid green;*/
+//  position: absolute;
+//  bottom:0; width: 100%;
+//  background-color: gainsboro;
+//height: 60px;
+//}
+.bottomRelative{position:relative;}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-1.1em) scale(.75);
+  width: 133.33333%;
+}
+
+form{
+  align-items: center;
+  position: fixed;
+  bottom:0 !important;
+  width: 95%;
+  margin: 2.5%;
+  background-color: white;
+  border-radius: 10px;
+  height: 55px;
+}
+
+.peerName{
+ color: purple;
+}
+
+span{
+  height: max-content !important;
+  min-height: 55px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100% !important;
+}
+//
+//mat-expansion-panel-header{
+//  height: max-content !important;
+//  min-height: 55px;
+//  padding-right: 30px;
+//}
+
+mat-list-item:hover{
+  background: rgba(97,97,255,0.5) !important;
+}
+
+textarea{
+  min-height: max-content !important;
+  width: 100%;
+}
+
+.greyText{
+  color: grey;
+  margin-top: -2px;
+}
+
+p{
+  color: black;
+  position: center;
+}
+
+.floatRight{
+  float: right;
+}
+
+table, th, td {
+  //border: 1px solid black;
+  padding: 1px;
+  align-items: center;
+  width: 100%;
+
+}

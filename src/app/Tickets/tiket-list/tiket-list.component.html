@@ -1,0 +1,4 @@
+<h1>Tickets</h1>
+<mat-nav-list *ngFor="let ticket of tickets">
+  <mat-list-item class="mat-elevation-z2 mat-" [routerLink]="['/customers/', phoneId, ticket.id]">{{ticket.id}}</mat-list-item>
+</mat-nav-list>
